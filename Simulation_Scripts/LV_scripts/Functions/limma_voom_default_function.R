@@ -1,6 +1,12 @@
 #### limma-voom Pipeline for Null Simulations (DE=0) ####
 #### Purpose: Flexible limma-voom analysis for multiple datasets with null hypothesis
-#### To run the lmFit in the robust mode please uncomment line 106
+
+# Author: Erda Qorri
+# Date: 01-02=2026
+
+##############################################################################################
+                                         # voomlmFit default
+##############################################################################################
 
 library(dplyr)
 library(edgeR)
