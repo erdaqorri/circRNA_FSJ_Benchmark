@@ -108,8 +108,8 @@ run_limma_default_DE0 <- function(bsj_counts_path,
     #### Step 4: Fit voomLmFit with sample.weights set to TRUE voom to the model ####
     # it replaces all the commands with one function
     dgelist_v <- voom(dgelist_norm, design_mtx, plot = F)
+    
     dgelist_vfit <- lmFit(dgelist_v, design_mtx)
-    # dgelist_vfit <- lmFit(dgelist_v, design_mtx, robust = TRUE)
 
     # Step 5: Set the contrast matrix and DE analysis
     cat(" Starting Step 5: Testing contrasts... \n")
