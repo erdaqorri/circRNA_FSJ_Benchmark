@@ -1,6 +1,13 @@
 #### limma-voom Pipeline for Null Simulations (DE=0) ####
 #### Purpose: Flexible limma-voom analysis for multiple datasets with null hypothesis
 
+# Author: Erda Qorri
+# Date: 01-02=2026
+
+##############################################################################################
+                                         # voom-lmFit default
+##############################################################################################
+
 library(dplyr)
 library(edgeR)
 library(limma)
@@ -129,9 +136,6 @@ run_limma_default_DE0 <- function(bsj_counts_path,
     dgelist_v <- voom(dgelist_norm, design_mtx, plot = F)
     
     dgelist_vfit <- lmFit(dgelist_v, design_mtx)
-    
-    #dgelist_v <- voom(dgelist_norm, design_mtx, plot = F, normalize.method = "quantile")
-    # dgelist_vfit <- lmFit(dgelist_v, design_mtx, robust = TRUE)
 
     # Step 5: Set the contrast matrix and DE analysis
     cat(" Starting Step 5: Testing contrasts... \n")
