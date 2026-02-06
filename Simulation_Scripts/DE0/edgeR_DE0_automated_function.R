@@ -126,7 +126,6 @@ run_edgeR_DE0 <- function(bsj_counts_path,
   
   # Extract the full results
   results = as.data.frame(topTags(qlf, n = Inf))
-  write.csv(results, "/Users/alexakouri/Documents/DE_benchmarking_paper/simulations/BC/autofilter_counts/DE_0/res.csv")
   
   # Step 6: Calculate the metrics at each Pvalue threshold #
   cat(" Starting Step 6: Calculating metrics at each Pvalue threshold... \n")
